@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: SmartRoute Navigator
+  jackson:
+    serialization:
+      indent-output: true
+    default-property-inclusion: non_null
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    com.smartroute: DEBUG
+    org.springframework.web: INFO
